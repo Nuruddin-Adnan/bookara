@@ -42,7 +42,7 @@ body {
 }
 
 body {
-  font-family: "Nunito", sans-serif;
+  font-family: "Inter", sans-serif;
   color: #121212;
   font-weight: 400;
 }
@@ -59,13 +59,91 @@ body {
   height: 100vh;
 }
 
+.text-xs {
+  font-size: 12px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
 @media screen and (min-width: 992px) {
   .position-sticky-lg {
     position: -webkit-sticky;
     position: sticky;
   }
+  .w-lg-75 {
+    width: 75%;
+  }
+}
+.page-navigation {
+  background-color: #fff;
+  border-radius: 20px;
+}
+@media screen and (max-width: 991px) {
+  .page-navigation {
+    border-radius: 15px;
+  }
+}
+.page-navigation h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #121212;
+}
+.page-navigation h2 span {
+  font-size: 20px;
+  color: #D1D1D1;
+}
+@media screen and (max-width: 991px) {
+  .page-navigation h2 span {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 991px) {
+  .page-navigation h2 {
+    font-size: 20px;
+  }
 }
 
+.btn-dark {
+  background-color: #121212;
+  font-family: "Inter", sans-serif;
+}
+
+.btn-outline-dark {
+  border-color: #121212;
+  border-width: 1.5px;
+}
+.btn-outline-dark:hover {
+  background-color: #121212;
+}
+
+.form-default label {
+  font-weight: 600;
+  font-size: 14px;
+}
+.form-default label.label-lg {
+  font-size: 1rem;
+}
+.form-default .form-control {
+  border: 1.5px solid #D1D1D1;
+  border-radius: 7px;
+  font-weight: 500;
+}
+.form-default .form-control::-moz-placeholder {
+  color: #D1D1D1;
+}
+.form-default .form-control:-ms-input-placeholder {
+  color: #D1D1D1;
+}
+.form-default .form-control::placeholder {
+  color: #D1D1D1;
+}
+
+.navbar {
+  font-family: "Nunito", sans-serif;
+}
 .navbar .search-box {
   width: 100%;
   max-width: 300px;
@@ -121,6 +199,18 @@ body {
   color: white;
 }
 
+.service .service-card {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 20px;
+}
+@media screen and (max-width: 991px) {
+  .service .service-card {
+    border-radius: 15px;
+    padding: 15px;
+  }
+}
+
 /*=== abstracts css start === */
 /*===// end of abstracts css === */
 /*=== base css start === */
@@ -129,5 +219,4 @@ body {
 /*===// end of components css === */
 /*=== layout css start === */
 /*===// end of layout css === */
-/*=== pages start === */
-/*===// end of pages  === *//*# sourceMappingURL=style.css.map */
+/*=== pages start === *//*# sourceMappingURL=style.css.map */

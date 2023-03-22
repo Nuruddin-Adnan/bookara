@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookara | New Category </title>
+  <link rel='shortcut icon' href='assets/images/logo.png' type='image/x-icon'>
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="d-flex">
+    <aside class="side-nav bg-dark-1 text-white h-screen position-sticky top-0">
+      <a href="index.html" class="text-center d-block pt-lg-5">
+        <img src="assets/images/logo.png" alt="logo" class="img-fluid">
+      </a>
+      <ul>
+        <li>
+          <a href="index.html">
+            <img src="assets/images/icon/dashboard.svg" alt="icon">
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/Document.svg" alt="icon">
+            Calender
+          </a>
+        </li>
+        <li>
+          <a href="services.html" class="active">
+            <img src="assets/images/icon/More-Square.svg" alt="icon">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/users.svg" alt=" icon">
+            Clients
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/Message.svg" alt=" icon">
+            Reports
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/Setting.svg" alt=" icon">
+            Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/Chat.svg" alt=" icon">
+            Help
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <div class="w-100">
+      <!-- === header section start === -->
+      <header class="position-sticky top-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+          <div class="container-fluid">
+            <button class="btn btn-sm btn-dark d-inline-block d-lg-none" onclick="toggleSideNav()"><img
+                src="assets/images/icon/dashboard.svg" alt="icon"></button>
+            <a class="navbar-brand fw-bold fs-4" href="#" style="color: #1F192F;">Dashboard</a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="position-relative search-box d-lg-block d-none ps-5">
+              <input type="text" class="form-control rounded-pill pe-4" placeholder="Search">
+              <!-- <i class="fas fa-bell text-brand position-absolute end-0 top-50 translate-middle pe-1"> </i> -->
+              <img src="assets/images/icon/search-icon.png" class="position-absolute end-0 top-50 translate-middle "
+                alt="icon">
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link pe-4 fs-5" href="#">
+                    <i class="fas fa-bell text-brand position-relative">
+                      <sup class="position-absolute end-0 top-0 rounded-pill"
+                        style="background-color: #EA8F95; width: 8px; height: 8px;"></sup>
+                    </i>
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <div class="d-flex align-items-center">
+                      <span class="fw-bold fs-5 me-3" style="color: #1F192F;">Hi, Sam</span> <img
+                        src="assets/images/profile.png" alt="profile picture" class="img-fluld d-block rounded-pill"
+                        style="width: 35px; height: 35px">
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Setting</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: #1F192F;">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                </li>
+              </ul>
+              <!-- <a href="#" class="btn btn-dark d-none d-lg-inline-block">Login</a> -->
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- ===//end of header section === -->
+      <!-- === main start === -->
+      <main class="main  p-lg-4 p-3">
+
+        <!-- === page-navigation section start === -->
+        <section>
+          <div class="container">
+            <div class="page-navigation p-lg-4 p-3 d-flex align-items-center justify-content-between">
+              <h2><strong class="text-dark-1">New Category</strong></h2>
+            </div>
+          </div>
+        </section>
+        <!-- ===//end of page-navigation section === -->
+
+        <!-- === service/add category section start === -->
+        <section class="service mt-lg-4 mt-3">
+          <div class="container">
+            <div class="service-card">
+              <a href="services-add.html" class="back-btn btn fs-3" style="color: #AAA9A9;">
+                <i class="far fa-angle-left"></i>
+              </a>
+
+              <div class="px-lg-5 p-3">
+                <form class="form-default">
+                  <div class="row gy-lg-5 gy-4">
+                    <div class="col-lg-6">
+                      <label class="label-lg mb-2">Category Name</label>
+                      <input type="text" class="form-control" placeholder="type chosen name here...">
+                    </div>
+                    <div class="col-lg-12">
+                      <label class="label-lg mb-2">Category Colour</label>
+                      <div>
+                        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #212121; width: 30px; height: 30px;" for="option1"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #C80000; width: 30px; height: 30px;" for="option2"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #C80078; width: 30px; height: 30px;" for="option3"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option4" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #8D00B5; width: 30px; height: 30px;" for="option4"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option5" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #5000B5; width: 30px; height: 30px;" for="option5"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option6" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #002BC5; width: 30px; height: 30px;" for="option6"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option7" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #005AC5; width: 30px; height: 30px;" for="option7"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option8" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #008AC5; width: 30px; height: 30px;" for="option8"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option9" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #00A5AF; width: 30px; height: 30px;" for="option9"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option10" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #00880D; width: 30px; height: 30px;" for="option10"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option11" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #E28900; width: 30px; height: 30px;" for="option11"></label>
+
+                        <input type="radio" class="btn-check" name="options" id="option12" autocomplete="off">
+                        <label class="btn rounded-pill p-0 me-lg-3 m-2"
+                          style="background-color: #EC5500; width: 30px; height: 30px;" for="option12"></label>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <label class="label-lg mb-3">Select Services</label>
+                      <div class="form-check mb-2">
+                        <input class="form-check-input" type="checkbox" id="all-select" onchange="selectAll(this)">
+                        <label class="form-check-label" for="all-select">
+                          Select All
+                        </label>
+                      </div>
+                      <div class="row gy-2 select-service">
+                        <div class="col-lg-3 col-6">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="sandard-haircut">
+                            <label class="form-check-label" for="sandard-haircut">
+                              Standard Haircut
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="high-fade-and-trim">
+                            <label class="form-check-label" for="high-fade-and-trim">
+                              High Fade and Trim
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="tapered-fade">
+                            <label class="form-check-label" for="tapered-fade">
+                              Tapered Fade
+                            </label>
+                          </div>
+                        </div>
+                        <div class="col-lg-3 col-6">
+                          <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="box-high-top">
+                            <label class="form-check-label" for="box-high-top">
+                              Box High Top
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="text-end mt-lg-5 mt-4">
+                    <button type="submit"
+                      class="btn btn-lg btn-outline-dark me-4 text-xs"><strong>Save</strong></button>
+                    <button type="button" class="btn btn-lg btn-outline-dark text-xs"><strong>Cancel</strong></button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ===//end of service/add category section === -->
+
+      </main>
+      <!-- ===//end of main === -->
+    </div>
+  </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <script>
+    function selectAll(e) {
+      const othersCheckBox = document.querySelectorAll('.select-service .form-check-input');
+      if (e.checked == true) {
+        [...othersCheckBox].forEach(checkbox => {
+          checkbox.checked = true;
+        })
+      } else {
+        [...othersCheckBox].forEach(checkbox => {
+          checkbox.checked = false;
+        })
+      }
+    }
+  </script>
+</body>
+
+</html>

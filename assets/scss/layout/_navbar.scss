@@ -1,6 +1,8 @@
 @use '../abstracts/variables';
 
 .navbar {
+    font-family: 'Nunito', sans-serif;
+
     .search-box {
         width: 100%;
         max-width: 300px;

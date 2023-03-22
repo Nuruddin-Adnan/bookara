@@ -1,0 +1,30 @@
+@use '../abstracts/variables';
+
+.page-navigation {
+    background-color: #fff;
+    border-radius: 20px;
+
+    @media screen and (max-width: 991px) {
+        border-radius: 15px;
+    }
+
+    h2 {
+        font-family: 'Inter', sans-serif;
+        font-size: 28px;
+        font-weight: 700;
+        color: variables.$color-dark-1;
+
+        span {
+            font-size: 20px;
+            color: #D1D1D1;
+
+            @media screen and (max-width: 991px) {
+                font-size: 16px;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+            font-size: 20px;
+        }
+    }
+}

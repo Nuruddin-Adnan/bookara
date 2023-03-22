@@ -12,8 +12,20 @@
     height: 100vh;
 }
 
-.position-sticky-lg {
-    @media screen and (min-width: 992px) {
+.text-xs {
+    font-size: 12px;
+}
+
+.text-sm {
+    font-size: 14px;
+}
+
+@media screen and (min-width: 992px) {
+    .position-sticky-lg {
         position: sticky;
+    }
+
+    .w-lg-75 {
+        width: 75%;
     }
 }

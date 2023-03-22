@@ -11,7 +11,9 @@
 
 
 /*=== components css start === */
+@use 'components/page-navigation';
 @use 'components/buttons';
+@use 'components/form';
 /*===// end of components css === */
 
 
@@ -23,5 +25,5 @@
 
 
 /*=== pages start === */
-
+@use 'pages/service'
 /*===// end of pages  === */

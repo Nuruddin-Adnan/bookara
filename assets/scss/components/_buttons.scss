@@ -1,0 +1,15 @@
+@use '../abstracts/variables';
+
+.btn-dark {
+    background-color: variables.$color-dark-1;
+    font-family: 'Inter', sans-serif;
+}
+
+.btn-outline-dark {
+    border-color: variables.$color-dark-1;
+    border-width: 1.5px;
+
+    &:hover {
+        background-color: variables.$color-dark-1;
+    }
+}
