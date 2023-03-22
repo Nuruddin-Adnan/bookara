@@ -1,0 +1,7 @@
+@use '../abstracts/variables';
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: variables.$color-dark-1;
+  font-weight: 400;
+}

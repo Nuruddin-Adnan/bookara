@@ -1,0 +1,13 @@
+@use '../abstracts/variables';
+
+.text-brand {
+    color: variables.$color-primary;
+}
+
+.bg-dark-1 {
+    background-color: variables.$color-dark-1;
+}
+
+.h-screen {
+    height: 100vh;
+}
