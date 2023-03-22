@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -57,6 +57,68 @@ body {
 
 .h-screen {
   height: 100vh;
+}
+
+@media screen and (min-width: 992px) {
+  .position-sticky-lg {
+    position: -webkit-sticky;
+    position: sticky;
+  }
+}
+
+.navbar .search-box {
+  width: 100%;
+  max-width: 300px;
+}
+.navbar .search-box .form-control::-moz-placeholder {
+  background-color: #F5F3FF;
+  border-color: transparent;
+  color: #4C24C0;
+  font-weight: 500;
+}
+.navbar .search-box .form-control:-ms-input-placeholder {
+  background-color: #F5F3FF;
+  border-color: transparent;
+  color: #4C24C0;
+  font-weight: 500;
+}
+.navbar .search-box .form-control, .navbar .search-box .form-control::placeholder {
+  background-color: #F5F3FF;
+  border-color: transparent;
+  color: #4C24C0;
+  font-weight: 500;
+}
+.side-nav {
+  width: 300px;
+  overflow-y: auto;
+  transition: all 0.2s linear;
+}
+@media screen and (max-width: 991px) {
+  .side-nav {
+    position: fixed !important;
+    right: 100%;
+    top: 60px !important;
+    transition: all 0.2s linear;
+  }
+}
+.side-nav ul li a {
+  border-radius: 15px 0px 0px 15px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 15px;
+  display: block;
+  transition: all 0.2s linear;
+}
+.side-nav ul li a img {
+  margin-right: 15px;
+}
+.side-nav ul li a.active {
+  background: linear-gradient(273.78deg, #3F02A3 8.84%, #624DE3 71.09%, #725ED0 102.21%);
+  color: white;
+}
+.side-nav ul li a:hover {
+  color: white;
 }
 
 /*=== abstracts css start === */

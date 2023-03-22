@@ -11,3 +11,9 @@
 .h-screen {
     height: 100vh;
 }
+
+.position-sticky-lg {
+    @media screen and (min-width: 992px) {
+        position: sticky;
+    }
+}

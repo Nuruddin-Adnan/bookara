@@ -1,0 +1,19 @@
+@use '../abstracts/variables';
+
+.navbar {
+    .search-box {
+        width: 100%;
+        max-width: 300px;
+
+        .form-control {
+            background-color: #F5F3FF;
+            border-color: transparent;
+            color: variables.$color-primary;
+            font-weight: 500;
+
+            &::placeholder {
+                @extend .form-control;
+            }
+        }
+    }
+}
