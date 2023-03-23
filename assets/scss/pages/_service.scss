@@ -1,3 +1,5 @@
+@use '../abstracts/variables';
+
 .service {
     .service-card {
         background-color: #fff;
@@ -7,6 +9,38 @@
         @media screen and (max-width: 991px) {
             border-radius: 15px;
             padding: 15px;
+        }
+    }
+}
+
+//Add new service page
+.new-service {
+    .steps-form {
+        .steps-form-header {
+            border-bottom: 4px solid #F2F2F2;
+            padding-bottom: 20px;
+            margin-bottom: 10px;
+
+            input[type="radio"] {
+                width: 40px;
+                height: 40px;
+                accent-color: variables.$color-primary;
+                margin-right: 10px;
+            }
+
+            h3 {
+                font-size: 18px;
+                font-weight: 700;
+                color: variables.$color-dark-1;
+                margin-bottom: 0;
+            }
+
+            p {
+                font-size: 12px;
+                font-weight: 500;
+                color: #D1D1D1;
+                margin-bottom: 0;
+            }
         }
     }
 }

@@ -123,6 +123,9 @@ body {
   font-weight: 600;
   font-size: 14px;
 }
+.form-default label.label-xs {
+  font-size: 12px;
+}
 .form-default label.label-lg {
   font-size: 1rem;
 }
@@ -139,6 +142,15 @@ body {
 }
 .form-default .form-control::placeholder {
   color: #D1D1D1;
+}
+.form-default .form-select {
+  border: 1.5px solid #D1D1D1;
+  border-radius: 7px;
+  font-weight: 500;
+  color: #121212;
+}
+.form-default .radio-default {
+  accent-color: #121212;
 }
 
 .navbar {
@@ -209,6 +221,30 @@ body {
     border-radius: 15px;
     padding: 15px;
   }
+}
+
+.new-service .steps-form .steps-form-header {
+  border-bottom: 4px solid #F2F2F2;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
+}
+.new-service .steps-form .steps-form-header input[type=radio] {
+  width: 40px;
+  height: 40px;
+  accent-color: #4C24C0;
+  margin-right: 10px;
+}
+.new-service .steps-form .steps-form-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #121212;
+  margin-bottom: 0;
+}
+.new-service .steps-form .steps-form-header p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #D1D1D1;
+  margin-bottom: 0;
 }
 
 /*=== abstracts css start === */

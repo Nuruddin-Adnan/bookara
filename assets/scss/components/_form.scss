@@ -3,10 +3,15 @@
         font-weight: 600;
         font-size: 14px;
 
+        &.label-xs {
+            font-size: 12px;
+        }
+
         &.label-lg {
             font-size: 1rem;
         }
     }
+
 
     .form-control {
         border: 1.5px solid #D1D1D1;
@@ -16,6 +21,16 @@
         &::placeholder {
             color: #D1D1D1;
         }
+    }
 
+    .form-select {
+        border: 1.5px solid #D1D1D1;
+        border-radius: 7px;
+        font-weight: 500;
+        color: #121212;
+    }
+
+    .radio-default {
+        accent-color: #121212;
     }
 }
