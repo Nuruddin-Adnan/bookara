@@ -47,6 +47,14 @@ body {
   font-weight: 400;
 }
 
+.text-xs {
+  font-size: 12px;
+}
+
+.text-sm {
+  font-size: 14px;
+}
+
 .text-brand {
   color: #4C24C0;
 }
@@ -57,14 +65,6 @@ body {
 
 .h-screen {
   height: 100vh;
-}
-
-.text-xs {
-  font-size: 12px;
-}
-
-.text-sm {
-  font-size: 14px;
 }
 
 @media screen and (min-width: 992px) {
@@ -151,6 +151,10 @@ body {
 }
 .form-default .radio-default {
   accent-color: #121212;
+}
+
+header.position-sticky {
+  z-index: 1030;
 }
 
 .navbar {
@@ -247,6 +251,76 @@ body {
   margin-bottom: 0;
 }
 
+.availability .accordion-item {
+  margin-bottom: 20px;
+  border: 1px solid #D8D8D8;
+  border-radius: 10px;
+}
+.availability .accordion-item .accordion-button {
+  border-radius: 10px;
+  border-color: transparent;
+  background-color: #F4F4F4;
+  font-size: 20px;
+  font-weight: 700;
+  color: #121212;
+  padding: 20px;
+  box-shadow: none;
+}
+.availability .accordion-item .accordion-button::after {
+  transform: rotate(-90deg);
+}
+.availability .accordion-item .accordion-button:not(.collapsed) {
+  background-color: #fff;
+}
+.availability .accordion-item .accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg);
+}
+.availability .accordion-item .accordion-body {
+  padding-top: 0;
+}
+
+.add-ons {
+  padding-bottom: 60px;
+}
+.add-ons .table input[type=checkbox] {
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  color: #121212;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #121212;
+  border-radius: 6px;
+  transform: translateY(-0.075em);
+  display: grid;
+  place-content: center;
+}
+.add-ons .table input[type=checkbox]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #121212;
+  transform-origin: bottom left;
+  -webkit-clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+          clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+.add-ons .table input[type=checkbox]:checked::before {
+  transform: scale(1);
+}
+.add-ons .table td {
+  font-weight: 500;
+}
+.add-ons .active > .page-link,
+.add-ons .page-link.active {
+  background-color: #121212;
+  border-color: #121212;
+}
+
 /*=== abstracts css start === */
 /*===// end of abstracts css === */
 /*=== base css start === */
@@ -255,4 +329,5 @@ body {
 /*===// end of components css === */
 /*=== layout css start === */
 /*===// end of layout css === */
-/*=== pages start === *//*# sourceMappingURL=style.css.map */
+/*=== pages start === */
+/*===// end of pages  === *//*# sourceMappingURL=style.css.map */

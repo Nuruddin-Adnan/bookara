@@ -1,5 +1,9 @@
 @use '../abstracts/variables';
 
+header.position-sticky {
+    z-index: 1030;
+}
+
 .navbar {
     font-family: 'Nunito', sans-serif;
 

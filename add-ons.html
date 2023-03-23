@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bookara | Add Services </title>
+  <title>Bookara | Add ons </title>
   <link rel='shortcut icon' href='assets/images/logo.png' type='image/x-icon'>
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -133,44 +133,114 @@
         <!-- === page-navigation section start === -->
         <section>
           <div class="container">
-            <div class="page-navigation p-lg-4 p-3 d-flex align-items-center justify-content-between">
-              <h2><strong class="text-dark-1">Services</strong></h2>
+            <div class="page-navigation px-lg-4 p-3 d-flex align-items-center justify-content-between">
+              <h2><strong class="text-dark-1"><span>Services |</span> Add-ons </strong></h2>
+              <div>
+                <a href="new-add-ons.html" class="btn btn-dark px-lg-4 py-lg-3"><i class="fas fa-plus"></i>
+                  <strong>Add</strong></a>
+              </div>
             </div>
           </div>
         </section>
         <!-- ===//end of page-navigation section === -->
 
-        <!-- === service section start === -->
+        <!-- === add-ons section start === -->
         <section class="service mt-lg-4 mt-3">
           <div class="container">
             <div class="service-card">
-              <a href="services.html" class="back-btn btn fs-3" style="color: #AAA9A9;">
-                <i class="far fa-angle-left"></i>
-              </a>
-
-              <div class="row w-lg-75 m-auto" style="padding-bottom: 38vh;">
-                <div class="col-6">
-                  <a href="new-service.html" class="btn btn-lg w-100 btn-dark px-lg-4 py-lg-3"> <strong>Add
-                      Service</strong></a>
-                </div>
-                <div class="col-6">
-                  <a href="new-category.html" class="btn btn-lg w-100 btn-dark px-lg-4 py-lg-3"> <strong>Add
-                      Category</strong></a>
-                </div>
+              <div class="table-responsive add-ons">
+                <table class="table" id="add-ons-table">
+                  <thead>
+                    <tr>
+                      <th>Name </th>
+                      <th>Price (£)</th>
+                      <th>Duration</th>
+                      <th>Public</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Hairline Dye </td>
+                      <td>5.00</td>
+                      <td>10 mins</td>
+                      <td><input type="checkbox" checked disabled></td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-sm px-1 py-0 btn-dark text-xs" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-ellipsis-h"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                            <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                            <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Hotel Towel Treatment</td>
+                      <td>15.00</td>
+                      <td>20 mins</td>
+                      <td><input type="checkbox" checked disabled></td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-sm px-1 py-0 btn-dark text-xs" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-ellipsis-h"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                            <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                            <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>V.I.P. Service</td>
+                      <td>100.00</td>
+                      <td>0 mins</td>
+                      <td></td>
+                      <td>
+                        <div class="dropdown">
+                          <button class="btn btn-sm px-1 py-0 btn-dark text-xs" type="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="fas fa-ellipsis-h"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item text-sm" href="#">Action</a></li>
+                            <li><a class="dropdown-item text-sm" href="#">Another action</a></li>
+                            <li><a class="dropdown-item text-sm" href="#">Something else here</a></li>
+                          </ul>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
           </div>
         </section>
-        <!-- ===//end of service section === -->
+        <!-- === add-ons section start === -->
 
       </main>
       <!-- ===//end of main === -->
     </div>
   </div>
 
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+    $(document).ready(function () {
+      $('#add-ons-table').DataTable();
+    });
+  </script>
 </body>
 
 </html>

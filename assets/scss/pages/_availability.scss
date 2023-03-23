@@ -1,0 +1,36 @@
+@use '../abstracts/variables';
+
+.availability {
+    .accordion-item {
+        margin-bottom: 20px;
+        border: 1px solid #D8D8D8;
+        border-radius: 10px;
+
+        .accordion-button {
+            border-radius: 10px;
+            border-color: transparent;
+            background-color: #F4F4F4;
+            font-size: 20px;
+            font-weight: 700;
+            color: variables.$color-dark-1;
+            padding: 20px;
+            box-shadow: none;
+
+            &::after {
+                transform: rotate(-90deg);
+            }
+        }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #fff;
+
+            &::after {
+                transform: rotate(0deg);
+            }
+        }
+
+        .accordion-body {
+            padding-top: 0;
+        }
+    }
+}
