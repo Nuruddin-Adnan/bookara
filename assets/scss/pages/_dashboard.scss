@@ -1,0 +1,203 @@
+.dashboard {
+
+    .bookings-widget {
+        background-color: #121212;
+        border-radius: 15px;
+        color: #fff;
+        font-family: 'Nunito', sans-serif;
+
+        .booking-widget-header {
+            .left {
+                font-weight: 800;
+                font-size: 1.25rem;
+            }
+
+            .right {
+                font-weight: 700;
+                font-size: .5rem;
+
+
+                .text-green {
+                    font-size: .75rem;
+                    color: #70CF97;
+                    padding-inline: 5px;
+                }
+
+                i {
+                    width: 15px;
+                    height: 15px;
+                    background-color: #70CF97;
+                    border-radius: 50%;
+                    display: grid;
+                    place-items: center;
+                    color: #121212;
+                    font-size: .75rem;
+                    transform: rotate(45deg);
+                }
+            }
+
+        }
+
+        .bookings-widget-slider {
+            padding: 20px 0 40px 0;
+
+            .swiper-slide {
+                h2 {
+                    font-size: 3.5rem;
+                    font-weight: 800;
+                }
+
+                p {
+                    font-weight: 700;
+                }
+            }
+
+            .swiper-pagination-bullet {
+                width: 20px;
+                height: 3.5px;
+                border-radius: 3.5px;
+                background-color: #B3B3B3;
+
+                &.swiper-pagination-bullet-active {
+                    background-color: #fff;
+                    width: 25px;
+                    height: 5;
+                }
+            }
+        }
+
+    }
+
+    .revenue-widget {
+        background-color: #fff;
+        border-radius: 15px;
+        color: #121212;
+        font-family: 'Nunito', sans-serif;
+
+        .revenue-widget-header {
+            h3 {
+                font-weight: 800;
+                font-size: 1.25rem;
+
+                img {
+                    width: 25px;
+                    margin-top: -5px;
+                }
+            }
+        }
+
+        .revenue-widget-slider {
+            padding: 20px 0 40px 0;
+
+            .swiper-slide {
+                h2 {
+                    font-size: 3.5rem;
+                    font-weight: 800;
+                }
+
+                p {
+                    font-weight: 700;
+                }
+            }
+
+            .swiper-pagination-bullet {
+                width: 20px;
+                height: 3.5px;
+                border-radius: 3.5px;
+                background-color: #B3B3B3;
+
+                &.swiper-pagination-bullet-active {
+                    background-color: #121212;
+                    width: 25px;
+                    height: 5;
+                }
+            }
+        }
+    }
+
+    .next-appointment-widget {
+        background-color: #fff;
+        border-radius: 15px;
+        color: #121212;
+        font-family: 'Nunito', sans-serif;
+
+        .title {
+            font-weight: 800;
+            font-size: 1.5rem;
+        }
+
+        ul {
+            padding-top: 40px;
+            padding-bottom: 40px;
+
+            li {
+                font-weight: 800;
+                font-size: 1.25rem;
+                padding: 5px 0;
+                color: #333;
+            }
+        }
+    }
+
+    .hours-widget {
+        background-color: #fff;
+        border-radius: 15px;
+        color: #121212;
+
+        .hours-widget-header {
+            .title {
+                font-weight: 700;
+                font-size: 1.25rem;
+                color: #121212;
+            }
+
+            .right {
+                font-weight: 700;
+                font-size: 1rem;
+                color: #4C24C0;
+            }
+        }
+
+        .hours-widge-body {
+            h3 {
+                font-weight: 700;
+                font-size: 2rem;
+                color: #4C24C0;
+
+                sub {
+                    font-size: 1.25rem;
+                    color: #D8D8D8;
+                    bottom: 0;
+                }
+            }
+
+            .progress {
+                border-radius: 25px;
+                background-color: #D8D8D8;
+                overflow: visible;
+
+
+                .progress-bar {
+                    overflow: visible;
+                    border-radius: 25px;
+                    background-color: #4C24C0;
+                    text-align: right;
+
+                    span {
+                        color: #121212;
+                        font-family: 'Nunito', sans-serif;
+                        font-weight: 700;
+                        margin-top: -40px;
+                    }
+                }
+            }
+
+            p {
+                font-family: 'Nunito', sans-serif;
+                font-weight: 700;
+                font-size: 1rem;
+                color: #121212;
+            }
+        }
+    }
+}

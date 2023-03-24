@@ -1,13 +1,15 @@
 .side-nav {
-    width: 300px;
+    width: 250px;
     overflow-y: auto;
     transition: all 0.2s linear;
+    flex-shrink: 0;
 
     @media screen and (max-width: 991px) {
         position: fixed !important;
         right: 100%;
         top: 60px !important;
         transition: all 0.2s linear;
+        z-index: 999;
     }
 
     ul {

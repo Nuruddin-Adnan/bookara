@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bookara | Dashboard</title>
+  <link rel='shortcut icon' href='assets/images/logo.png' type='image/x-icon'>
+  <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+  <div class="d-flex w-100">
+    <aside class="side-nav bg-dark-1 text-white h-screen position-sticky top-0">
+      <a href="index.html" class="text-center d-block pt-lg-5">
+        <img src="assets/images/logo.png" alt="logo" class="img-fluid">
+      </a>
+      <ul>
+        <li>
+          <a href="index.html" class="active">
+            <img src="assets/images/icon/dashboard.svg" alt="icon">
+            Dashboard
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/Document.svg" alt="icon">
+            Calender
+          </a>
+        </li>
+        <li>
+          <a href="services.html">
+            <img src="assets/images/icon/More-Square.svg" alt="icon">
+            Services
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/users.svg" alt=" icon">
+            Clients
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/Message.svg" alt=" icon">
+            Reports
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/Setting.svg" alt=" icon">
+            Settings
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <img src="assets/images/icon/Chat.svg" alt=" icon">
+            Help
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <div class="w-100">
+      <!-- === header section start === -->
+      <header class="position-sticky top-0">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+          <div class="container-fluid">
+            <button class="btn btn-sm btn-dark d-inline-block d-lg-none" onclick="toggleSideNav()"><img
+                src="assets/images/icon/dashboard.svg" alt="icon"></button>
+            <a class="navbar-brand fw-bold fs-4" href="#" style="color: #1F192F;">Dashboard</a>
+
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+              aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="position-relative search-box d-lg-block d-none ps-5">
+              <input type="text" class="form-control rounded-pill pe-4" placeholder="Search">
+              <!-- <i class="fas fa-bell text-brand position-absolute end-0 top-50 translate-middle pe-1"> </i> -->
+              <img src="assets/images/icon/search-icon.png" class="position-absolute end-0 top-50 translate-middle "
+                alt="icon">
+            </div>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-lg-center">
+                <li class="nav-item">
+                  <a class="nav-link pe-4 fs-5" href="#">
+                    <i class="fas fa-bell text-brand position-relative">
+                      <sup class="position-absolute end-0 top-0 rounded-pill"
+                        style="background-color: #EA8F95; width: 8px; height: 8px;"></sup>
+                    </i>
+                  </a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <div class="d-flex align-items-center">
+                      <span class="fw-bold fs-5 me-3" style="color: #1F192F;">Hi, Sam</span> <img
+                        src="assets/images/profile.png" alt="profile picture" class="img-fluld d-block rounded-pill"
+                        style="width: 35px; height: 35px">
+                    </div>
+                  </a>
+                  <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Setting</a></li>
+                    <li>
+                      <hr class="dropdown-divider">
+                    </li>
+                    <li><a class="dropdown-item" href="#">Logout</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#" style="color: #1F192F;">
+                    <i class="fas fa-ellipsis-v"></i>
+                  </a>
+                </li>
+              </ul>
+              <!-- <a href="#" class="btn btn-dark d-none d-lg-inline-block">Login</a> -->
+            </div>
+          </div>
+        </nav>
+      </header>
+      <!-- ===//end of header section === -->
+      <!-- === main start === -->
+      <main class="main p-lg-4 py-lg-4 py-3">
+
+        <div class="container dashboard">
+          <div class="row gy-4">
+            <div class="col-xl-8">
+              <div class="row gy-4">
+                <div class="col-md-6">
+                  <!-- === bookings-widget section start === -->
+                  <section class="bookings-widget p-lg-4 p-3">
+                    <header class="booking-widget-header d-flex align-items-center justify-content-between">
+                      <h3 class="text-nowrap left"> <i class="fas fa-calendar-day"></i> Bookings </h3>
+                      <div class="right d-flex align-items-center"><i class="far fa-angle-up"></i><span
+                          class="text-green">+15% </span> on last
+                        month</div>
+                    </header>
+                    <div class="bookings-widget-body">
+                      <!-- Swiper -->
+                      <div class="swiper bookings-widget-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide w-100 text-center">
+                            <h2>7</h2>
+                            <p>Today</p>
+                          </div>
+                          <div class="swiper-slide w-100 text-center">
+                            <h2>7</h2>
+                            <p>Today</p>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+
+                      <!-- Swiper JS -->
+                    </div>
+                  </section>
+                  <!-- ===//end of bookings-widget section === -->
+                </div>
+                <div class="col-md-6">
+                  <!-- === revenue-widget section start === -->
+                  <section class="revenue-widget p-lg-4 p-3">
+                    <header class="revenue-widget-header">
+                      <h3 class="text-nowrap"> <img src="assets/images/icon/Exchange-two.svg" alt="icon"
+                          class="img-fluid"> Bookings </h3>
+                    </header>
+                    <div class="revenue-widget-body">
+                      <!-- Swiper -->
+                      <div class="swiper revenue-widget-slider">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide w-100 text-center">
+                            <h2>5,700.21</h2>
+                            <p>Today</p>
+                          </div>
+                          <div class="swiper-slide w-100 text-center">
+                            <h2>5,700.21</h2>
+                            <p>Today</p>
+                          </div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+
+                      <!-- Swiper JS -->
+                    </div>
+                  </section>
+                  <!-- ===//end of revenue-widget section === -->
+                </div>
+              </div>
+            </div>
+            <div class="col-xl-4">
+              <!-- === next-appointment-widget section start === -->
+              <section class="next-appointment-widget  p-lg-4 p-3 mb-4">
+                <h3 class="title">Next Appointment</h3>
+                <ul class="ps-0">
+                  <li>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M17.4781 15.5L15.4999 22H8.49988L6.52173 15.5" stroke="#333333" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path d="M6.52173 8.5L8.49988 2H15.4999L17.4781 8.5" stroke="#333333" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+                      <path
+                        d="M18.5 12C18.5 13.2887 18.125 14.4897 17.4782 15.5C16.3231 17.3041 14.3012 18.5 12 18.5C9.6988 18.5 7.6769 17.3041 6.5218 15.5C5.875 14.4897 5.5 13.2887 5.5 12C5.5 10.7113 5.875 9.5103 6.5218 8.5C7.6769 6.69585 9.6988 5.5 12 5.5C14.3012 5.5 16.3231 6.69585 17.4782 8.5C18.125 9.5103 18.5 10.7113 18.5 12Z"
+                        fill="#333333" stroke="#333333" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M12 8.5V12L14 14" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+                    13:00 - 1600
+                  </li>
+                  <li> <svg width="24" height="26" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19 2.60553H5C4.44772 2.60553 4 3.0727 4 3.64899V22.4313C4 23.0075 4.44772 23.4747 5 23.4747H19C19.5523 23.4747 20 23.0075 20 22.4313V3.64899C20 3.0727 19.5523 2.60553 19 2.60553Z"
+                        fill="#333333" stroke="#333333" stroke-linejoin="round" />
+                      <path d="M10.5 7.82281H16.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M10.5 13.0402H16.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path d="M10.5 18.2574H16.5" stroke="white" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.5 8.86628C8.0523 8.86628 8.5 8.39912 8.5 7.82282C8.5 7.24651 8.0523 6.77936 7.5 6.77936C6.9477 6.77936 6.5 7.24651 6.5 7.82282C6.5 8.39912 6.9477 8.86628 7.5 8.86628Z"
+                        fill="white" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.5 14.0836C8.0523 14.0836 8.5 13.6165 8.5 13.0402C8.5 12.4639 8.0523 11.9967 7.5 11.9967C6.9477 11.9967 6.5 12.4639 6.5 13.0402C6.5 13.6165 6.9477 14.0836 7.5 14.0836Z"
+                        fill="white" />
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M7.5 19.3009C8.0523 19.3009 8.5 18.8338 8.5 18.2574C8.5 17.6811 8.0523 17.214 7.5 17.214C6.9477 17.214 6.5 17.6811 6.5 18.2574C6.5 18.8338 6.9477 19.3009 7.5 19.3009Z"
+                        fill="white" />
+                    </svg>
+                    Haircut & Blowdry
+                  </li>
+                  <li> <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M19.8 0H6.60002C5.38562 0 4.40002 0.9856 4.40002 2.2V15.4C4.40002 16.6144 5.38562 17.6 6.60002 17.6H19.8C21.0144 17.6 22 16.6144 22 15.4V2.2C22 0.9856 21.0144 0 19.8 0ZM13.2 2.75C14.7191 2.75 15.95 3.9809 15.95 5.5C15.95 7.0191 14.7191 8.25 13.2 8.25C11.6809 8.25 10.45 7.0191 10.45 5.5C10.45 3.9809 11.6809 2.75 13.2 2.75ZM18.7 14.3H7.70002V14.025C7.70002 11.9911 10.1794 9.9 13.2 9.9C16.2206 9.9 18.7 11.9911 18.7 14.025V14.3Z"
+                        fill="#333333" />
+                      <path d="M2.2 6.60004H0V19.8C0 21.0133 0.9867 22 2.2 22H15.4V19.8H2.2V6.60004Z" fill="#333333" />
+                    </svg>
+                    Sandra Williams
+                  </li>
+                  <li> <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <g clip-path="url(#clip0_501_2267)">
+                        <path
+                          d="M11 0C4.92545 0 0 4.92545 0 11C0 17.0746 4.92545 22 11 22C17.0746 22 22 17.0746 22 11C22 4.92545 17.0746 0 11 0ZM14.5848 16.1562C14.5848 16.2643 14.4964 16.3527 14.3884 16.3527H7.66563C7.55759 16.3527 7.4692 16.2643 7.4692 16.1562V15.2109C7.4692 15.1201 7.53058 15.0415 7.61897 15.0194C8.69933 14.7518 9.40647 13.8163 9.40647 12.7065C9.40647 12.3455 9.34509 11.9846 9.26161 11.6212H7.61161C7.50357 11.6212 7.41518 11.5328 7.41518 11.4248V10.6882C7.41518 10.5801 7.50357 10.4917 7.61161 10.4917H8.93013C8.73862 9.87545 8.57165 9.24687 8.57165 8.59866C8.57165 6.7375 10.0105 5.64487 12.2915 5.64487C12.9422 5.64487 13.5536 5.77991 14.0176 5.9567C14.0938 5.98616 14.1453 6.05982 14.1453 6.14085V7.11071C14.1454 7.14206 14.1381 7.17299 14.1238 7.20091C14.1096 7.22883 14.0888 7.25293 14.0633 7.27119C14.0379 7.28946 14.0084 7.30136 13.9774 7.30591C13.9463 7.31045 13.9147 7.30751 13.885 7.29732C13.4455 7.14018 12.9275 7.03951 12.402 7.03951C11.0933 7.03951 10.2585 7.69263 10.2585 8.76317C10.2585 9.36964 10.4107 9.93929 10.5875 10.4942H13.3375C13.4455 10.4942 13.5339 10.5826 13.5339 10.6906V11.4272C13.5339 11.5353 13.4455 11.6237 13.3375 11.6237H10.9165C10.9926 11.9478 11.0467 12.2842 11.0467 12.6304C11.0467 13.6297 10.6415 14.4449 9.96875 14.8672V14.9826H14.3884C14.4964 14.9826 14.5848 15.071 14.5848 15.179V16.1562Z"
+                          fill="#333333" />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_501_2267">
+                          <rect width="22" height="22" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                    75.00
+                  </li>
+                </ul>
+
+                <div class="text-center">
+                  <a href="#" class="btn btn-lg btn-dark px-md-4 text-sm">View All</a>
+                </div>
+              </section>
+              <!-- ===//end of next-appointment-widget section === -->
+
+
+              <!-- === hours-widget section start === -->
+              <section class="hours-widget p-lg-4 p-3">
+                <header class="hours-widget-header mb-5 d-flex  align-items-center justify-content-between">
+                  <h3 class="title left">Hours </h3>
+                  <h4 class="right"><i class="fal fa-long-arrow-up"></i> 27%</h4>
+                </header>
+                <div class="hours-widge-body">
+                  <h3>32/<sub>40</sub></h3>
+                  <div class="progress my-2">
+                    <div class="progress-bar" role="progressbar" aria-label="Example with label" style="width: 80%;"
+                      aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
+                  </div>
+                  <p>Completed this month</p>
+                </div>
+              </section>
+              <!-- ===//end of hours-widget section === -->
+            </div>
+          </div>
+        </div>
+
+
+
+      </main>
+      <!-- ===//end of main === -->
+    </div>
+  </div>
+
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script>
+  <script src="assets/js/custom.js"></script>
+  <!-- Initialize Swiper -->
+  <script>
+    const bookingsWidget = new Swiper(".bookings-widget-slider", {
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+    const revenueWidget = new Swiper(".revenue-widget-slider", {
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</body>
+
+</html>

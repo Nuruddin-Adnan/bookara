@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -183,9 +183,10 @@ header.position-sticky {
   font-weight: 500;
 }
 .side-nav {
-  width: 300px;
+  width: 250px;
   overflow-y: auto;
   transition: all 0.2s linear;
+  flex-shrink: 0;
 }
 @media screen and (max-width: 991px) {
   .side-nav {
@@ -193,6 +194,7 @@ header.position-sticky {
     right: 100%;
     top: 60px !important;
     transition: all 0.2s linear;
+    z-index: 999;
   }
 }
 .side-nav ul li a {
@@ -213,6 +215,161 @@ header.position-sticky {
 }
 .side-nav ul li a:hover {
   color: white;
+}
+
+.dashboard .bookings-widget {
+  background-color: #121212;
+  border-radius: 15px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+}
+.dashboard .bookings-widget .booking-widget-header .left {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+.dashboard .bookings-widget .booking-widget-header .right {
+  font-weight: 700;
+  font-size: 0.5rem;
+}
+.dashboard .bookings-widget .booking-widget-header .right .text-green {
+  font-size: 0.75rem;
+  color: #70CF97;
+  padding-inline: 5px;
+}
+.dashboard .bookings-widget .booking-widget-header .right i {
+  width: 15px;
+  height: 15px;
+  background-color: #70CF97;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #121212;
+  font-size: 0.75rem;
+  transform: rotate(45deg);
+}
+.dashboard .bookings-widget .bookings-widget-slider {
+  padding: 20px 0 40px 0;
+}
+.dashboard .bookings-widget .bookings-widget-slider .swiper-slide h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+.dashboard .bookings-widget .bookings-widget-slider .swiper-slide p {
+  font-weight: 700;
+}
+.dashboard .bookings-widget .bookings-widget-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 3.5px;
+  border-radius: 3.5px;
+  background-color: #B3B3B3;
+}
+.dashboard .bookings-widget .bookings-widget-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #fff;
+  width: 25px;
+  height: 5;
+}
+.dashboard .revenue-widget {
+  background-color: #fff;
+  border-radius: 15px;
+  color: #121212;
+  font-family: "Nunito", sans-serif;
+}
+.dashboard .revenue-widget .revenue-widget-header h3 {
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+.dashboard .revenue-widget .revenue-widget-header h3 img {
+  width: 25px;
+  margin-top: -5px;
+}
+.dashboard .revenue-widget .revenue-widget-slider {
+  padding: 20px 0 40px 0;
+}
+.dashboard .revenue-widget .revenue-widget-slider .swiper-slide h2 {
+  font-size: 3.5rem;
+  font-weight: 800;
+}
+.dashboard .revenue-widget .revenue-widget-slider .swiper-slide p {
+  font-weight: 700;
+}
+.dashboard .revenue-widget .revenue-widget-slider .swiper-pagination-bullet {
+  width: 20px;
+  height: 3.5px;
+  border-radius: 3.5px;
+  background-color: #B3B3B3;
+}
+.dashboard .revenue-widget .revenue-widget-slider .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #121212;
+  width: 25px;
+  height: 5;
+}
+.dashboard .next-appointment-widget {
+  background-color: #fff;
+  border-radius: 15px;
+  color: #121212;
+  font-family: "Nunito", sans-serif;
+}
+.dashboard .next-appointment-widget .title {
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+.dashboard .next-appointment-widget ul {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+.dashboard .next-appointment-widget ul li {
+  font-weight: 800;
+  font-size: 1.25rem;
+  padding: 5px 0;
+  color: #333;
+}
+.dashboard .hours-widget {
+  background-color: #fff;
+  border-radius: 15px;
+  color: #121212;
+}
+.dashboard .hours-widget .hours-widget-header .title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #121212;
+}
+.dashboard .hours-widget .hours-widget-header .right {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #4C24C0;
+}
+.dashboard .hours-widget .hours-widge-body h3 {
+  font-weight: 700;
+  font-size: 2rem;
+  color: #4C24C0;
+}
+.dashboard .hours-widget .hours-widge-body h3 sub {
+  font-size: 1.25rem;
+  color: #D8D8D8;
+  bottom: 0;
+}
+.dashboard .hours-widget .hours-widge-body .progress {
+  border-radius: 25px;
+  background-color: #D8D8D8;
+  overflow: visible;
+}
+.dashboard .hours-widget .hours-widge-body .progress .progress-bar {
+  overflow: visible;
+  border-radius: 25px;
+  background-color: #4C24C0;
+  text-align: right;
+}
+.dashboard .hours-widget .hours-widge-body .progress .progress-bar span {
+  color: #121212;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  margin-top: -40px;
+}
+.dashboard .hours-widget .hours-widge-body p {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #121212;
 }
 
 .service .service-card {
