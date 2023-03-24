@@ -10,6 +10,105 @@
             border-radius: 15px;
             padding: 15px;
         }
+
+        .all-services {
+            .accordion-item {
+                border-width: 2px;
+                border-color: rgba(#D1D1D1, .7);
+
+                &:first-child {
+                    border-top: 2px solid rgba(#D1D1D1, .7);
+                }
+
+                &:last-child {
+                    border-bottom: 2px solid rgba(#D1D1D1, .7);
+                }
+
+                .accordion-button {
+                    font-weight: 700;
+                    font-size: 20px;
+                    color: #121212;
+
+                    &:focus {
+                        box-shadow: none;
+                    }
+
+                    &::after {
+                        transform: rotate(-90deg);
+                    }
+
+                }
+
+                .accordion-button:not(.collapsed) {
+                    box-shadow: none;
+                    background-color: #fff;
+
+                    &::after {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+        }
+    }
+
+    .service-item {
+        .no-image-text {
+            padding: 15% 0;
+            height: 100%;
+            display: grid;
+            place-items: center;
+            text-align: center;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .serivce-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 0px;
+        }
+
+        .service-price {
+            font-size: 10px;
+            font-weight: 700;
+            color: #333;
+            margin-bottom: 3px;
+            margin-top: 3px;
+        }
+
+        .service-duration {
+            font-size: 10px;
+            font-weight: 700;
+            color: #7353DD;
+        }
+
+        .dropdown {
+            z-index: 999;
+        }
+
+    }
+
+    .add-new-service {
+        height: 100%;
+        border: 1px dashed rgba(#121212, .5);
+        background-color: rgba(#D1D1D1, .20);
+        display: grid;
+        place-items: center;
+        font-weight: 700;
+        font-size: 18px;
+        padding: 50px 0;
+
+        i {
+            color: #fff;
+            background-color: #121212;
+            border-radius: 7px;
+            width: 25px;
+            height: 25px;
+            display: grid;
+            place-items: center;
+            margin: auto;
+        }
     }
 }
 

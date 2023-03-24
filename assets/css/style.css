@@ -226,6 +226,84 @@ header.position-sticky {
     padding: 15px;
   }
 }
+.service .service-card .all-services .accordion-item {
+  border-width: 2px;
+  border-color: rgba(209, 209, 209, 0.7);
+}
+.service .service-card .all-services .accordion-item:first-child {
+  border-top: 2px solid rgba(209, 209, 209, 0.7);
+}
+.service .service-card .all-services .accordion-item:last-child {
+  border-bottom: 2px solid rgba(209, 209, 209, 0.7);
+}
+.service .service-card .all-services .accordion-item .accordion-button {
+  font-weight: 700;
+  font-size: 20px;
+  color: #121212;
+}
+.service .service-card .all-services .accordion-item .accordion-button:focus {
+  box-shadow: none;
+}
+.service .service-card .all-services .accordion-item .accordion-button::after {
+  transform: rotate(-90deg);
+}
+.service .service-card .all-services .accordion-item .accordion-button:not(.collapsed) {
+  box-shadow: none;
+  background-color: #fff;
+}
+.service .service-card .all-services .accordion-item .accordion-button:not(.collapsed)::after {
+  transform: rotate(0deg);
+}
+.service .service-item .no-image-text {
+  padding: 15% 0;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+.service .service-item .serivce-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 0px;
+}
+.service .service-item .service-price {
+  font-size: 10px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 3px;
+  margin-top: 3px;
+}
+.service .service-item .service-duration {
+  font-size: 10px;
+  font-weight: 700;
+  color: #7353DD;
+}
+.service .service-item .dropdown {
+  z-index: 999;
+}
+.service .add-new-service {
+  height: 100%;
+  border: 1px dashed rgba(18, 18, 18, 0.5);
+  background-color: rgba(209, 209, 209, 0.2);
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  padding: 50px 0;
+}
+.service .add-new-service i {
+  color: #fff;
+  background-color: #121212;
+  border-radius: 7px;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  margin: auto;
+}
 
 .new-service .steps-form .steps-form-header {
   border-bottom: 4px solid #F2F2F2;
