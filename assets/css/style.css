@@ -153,6 +153,26 @@ body {
   accent-color: #121212;
 }
 
+.eventsCard {
+  background-color: #121212 !important;
+}
+.eventsCard .title-1 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.eventsCard .title-2 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.eventsCard .title-3 {
+  font-size: 14px;
+  font-weight: 700;
+}
+.eventsCard .payments {
+  border-top: 1px dashed rgba(255, 255, 255, 0.25);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.25);
+}
+
 header.position-sticky {
   z-index: 1030;
 }
@@ -320,7 +340,7 @@ header.position-sticky {
 .dashboard .next-appointment-widget ul li {
   font-weight: 800;
   font-size: 1.25rem;
-  padding: 5px 0;
+  padding: 7px 0;
   color: #333;
 }
 .dashboard .hours-widget {
@@ -612,6 +632,23 @@ header.position-sticky {
 .add-ons .page-link.active {
   background-color: #121212;
   border-color: #121212;
+}
+
+.fullcalendar .fc .fc-col-header-cell-cushion,
+.fullcalendar .fc-event-time,
+.fullcalendar .fc-event-title {
+  color: #4C24C0;
+}
+.fullcalendar .fc .fc-daygrid-day-number {
+  font-family: "Nunito", sans-serif;
+  font-size: 20px;
+  color: rgba(51, 51, 51, 0.7);
+  font-weight: 700;
+}
+.fullcalendar .fc-v-event,
+.fullcalendar .fc-h-event {
+  background-color: rgba(76, 36, 192, 0.2);
+  border-color: rgba(76, 36, 192, 0.1);
 }
 
 /*=== abstracts css start === */

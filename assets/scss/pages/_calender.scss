@@ -1,0 +1,24 @@
+@use '../abstracts/variables';
+
+.fullcalendar {
+
+    .fc .fc-col-header-cell-cushion,
+    .fc-event-time,
+    .fc-event-title {
+        color: variables.$color-primary;
+    }
+
+    .fc .fc-daygrid-day-number {
+        font-family: 'Nunito', sans-serif;
+        font-size: 20px;
+        color: rgba(#333, 0.7);
+        font-weight: 700;
+    }
+
+    .fc-v-event,
+    .fc-h-event {
+        background-color: rgba(variables.$color-primary, 0.2);
+        border-color: rgba(variables.$color-primary, 0.1);
+    }
+
+}

@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bookara | Add Services </title>
+  <title>Bookara | Dashboard</title>
   <link rel='shortcut icon' href='assets/images/logo.png' type='image/x-icon'>
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
+  <script src='assets/vendor/fullcalendar/fullcalendar.global.min.js'></script>
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -27,13 +27,13 @@
           </a>
         </li>
         <li>
-          <a href="calender.html">
+          <a href="calender.html" class="active">
             <img src="assets/images/icon/Document.svg" alt="icon">
             Calender
           </a>
         </li>
         <li>
-          <a href="services.html" class="active">
+          <a href="services.html">
             <img src="assets/images/icon/More-Square.svg" alt="icon">
             Services
           </a>
@@ -128,49 +128,104 @@
       </header>
       <!-- ===//end of header section === -->
       <!-- === main start === -->
-      <main class="main p-lg-4 py-lg-4 py-3">
+      <main class="main  p-lg-4 py-lg-4 py-3">
 
-        <!-- === page-navigation section start === -->
-        <section>
+        <!-- === fullcalendar section start === -->
+        <section class="fullcalendar">
           <div class="container">
-            <div class="page-navigation p-lg-4 p-3 d-flex align-items-center justify-content-between">
-              <h2><strong class="text-dark-1">Services</strong></h2>
-            </div>
-          </div>
-        </section>
-        <!-- ===//end of page-navigation section === -->
-
-        <!-- === service section start === -->
-        <section class="service mt-lg-4 mt-3">
-          <div class="container">
-            <div class="service-card">
-              <a href="services.html" class="back-btn btn fs-3" style="color: #AAA9A9;">
-                <i class="far fa-angle-left"></i>
-              </a>
-
-              <div class="row w-lg-75 m-auto" style="padding-bottom: 38vh;">
-                <div class="col-6">
-                  <a href="new-service.html" class="btn btn-lg w-100 btn-dark px-lg-4 py-lg-3"> <strong>Add
-                      Service</strong></a>
-                </div>
-                <div class="col-6">
-                  <a href="new-category.html" class="btn btn-lg w-100 btn-dark px-lg-4 py-lg-3"> <strong>Add
-                      Category</strong></a>
-                </div>
+            <div class="card border-0 rounded-4">
+              <div class="card-body p-lg-4">
+                <div id='calendar'></div>
               </div>
             </div>
           </div>
         </section>
-        <!-- ===//end of service section === -->
+        <!-- ===//end of fullcalendar section === -->
 
       </main>
       <!-- ===//end of main === -->
     </div>
   </div>
 
+  <!-- ===//eventsCard start === -->
+  <div class="offcanvas offcanvas-end text-bg-dark eventsCard" tabindex="-1" id="eventDetails"
+    aria-labelledby="eventDetailsLabel">
+    <div class="offcanvas-header">
+      <button type="button" class="btn-close  btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body px-lg-4" id="eventDetailsContent">
+      <!-- html goes dynamically here from js function -->
+    </div>
+  </div>
+  <!-- ===//end of eventsCard === -->
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/swiper/js/swiper-bundle.min.js"></script>
   <script src="assets/js/custom.js"></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', function () {
+      const calendarEl = document.getElementById('calendar');
+      const calendar = new FullCalendar.Calendar(calendarEl, {
+        initialView: 'dayGridMonth',
+        headerToolbar: {
+          start: "prev next today",
+          center: "title",
+          end: 'timeGridWeek,dayGridMonth' // user can switch between the two
+        },
+        dayHeaderFormat: {
+          weekday: "long",
+        },
+        events: 'https://fullcalendar.io/api/demo-feeds/events.json',
+        eventClick: function (info) {
+          // show the eventsCard
+          showEventsCard(info);
+        },
+        // editable: true,
+        selectable: true,
+      });
+      calendar.render();
+    });
+
+    // show the eventsCard
+    function showEventsCard(info) {
+      const myOffcanvas = document.getElementById('eventDetails');
+      const myOffcanvasContent = document.getElementById('eventDetailsContent');
+      const bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas)
+      bsOffcanvas.show();
+
+      const bsOffcanvasBody = ` <header class="px-lg-4">
+        <h4 class="title-2" style="opacity: 0.3;">Wednesday 12th October 2022</h4>
+        <h4 class="title-2 my-5">
+          8.00 - 11:00 <br>
+          <span style="color: #70CF97;">${info.event.title}</span>
+          <br><br>
+          Janet East
+        </h4>
+        <h5 class="title-3">Email : janeeast22@gmail.com
+          <br> <br>
+          Phone: +447936212417
+        </h5>
+      </header>
+      <div class="payments my-4 py-4">
+        <div class="title-1" style="opacity: 0.3;">Payments</div>
+        <ul>
+          <li class="d-flex justify-content-between">Total Price : <span>250.00</span></li>
+          <li class="d-flex justify-content-between"> Amount Paid : <span>50.00</span></li>
+          <li class="d-flex justify-content-between">Amount Due : <span>200.00</span></li>
+        </ul>
+      </div>
+      <div class="footer px-lg-4">
+        <div class="text-end mb-4">
+          <button class="btn btn-info text-white">In Progress</button>
+        </div>
+        <p style="opacity: 0.3;">Tne Studio Ltd <br>
+          124 Broadway, Stratford, E15 4LC</p>
+      </div>`;
+
+      myOffcanvasContent.innerHTML = bsOffcanvasBody;
+    }
+
+  </script>
 </body>
 
 </html>
