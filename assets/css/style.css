@@ -371,6 +371,64 @@ header.position-sticky {
   font-size: 1rem;
   color: #121212;
 }
+.dashboard .calerder-quick-view .heading {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  color: #121212;
+  display: inline-block;
+  background-color: #fff;
+  margin-bottom: 0;
+  border-top-right-radius: 0.75rem;
+  border-top-left-radius: 0.75rem;
+  padding: 0.5rem 1.5rem;
+}
+.dashboard .calerder-quick-view .heading span {
+  font-size: 72%;
+  opacity: 0.4;
+}
+.dashboard .vanilla-calendar {
+  border-top-left-radius: 0;
+}
+.dashboard .vanilla-calendar-day__btn {
+  font-weight: 500;
+  font-size: 1rem;
+  min-height: 2.5rem;
+}
+.dashboard .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate {
+  background-color: #121212;
+  --tw-bg-opacity: 1;
+  border-radius: 0.5rem;
+}
+.dashboard .vanilla-calendar-day_selected-first .vanilla-calendar-day__btn_selected {
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+.dashboard .vanilla-calendar-day_selected-last .vanilla-calendar-day__btn_selected {
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
+.dashboard .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate,
+.dashboard .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate:hover {
+  background-color: #121212;
+}
+.dashboard .vanilla-calendar-header__content {
+  flex-grow: 0;
+}
+.dashboard .vanilla-calendar-header {
+  justify-content: center;
+}
+.dashboard .vanilla-calendar-arrow {
+  background-color: transparent;
+  margin: 0 30px;
+}
+.dashboard .vanilla-calendar-day {
+  width: 90%;
+}
+@media screen and (min-width: 768px) {
+  .dashboard .vanilla-calendar-day {
+    width: 50%;
+  }
+}
 
 .service .service-card {
   background-color: #fff;

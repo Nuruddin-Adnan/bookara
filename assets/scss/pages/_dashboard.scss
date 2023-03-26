@@ -200,4 +200,77 @@
             }
         }
     }
+
+    .calerder-quick-view {
+        .heading {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 700;
+            color: #121212;
+            display: inline-block;
+            background-color: #fff;
+            margin-bottom: 0;
+            border-top-right-radius: 0.75rem;
+            border-top-left-radius: 0.75rem;
+            padding: .5rem 1.5rem;
+
+            span {
+                font-size: 72%;
+                opacity: 0.4;
+            }
+        }
+    }
+
+    // valila calender dashboard
+    .vanilla-calendar {
+        border-top-left-radius: 0;
+    }
+
+    .vanilla-calendar-day__btn {
+        font-weight: 500;
+        font-size: 1rem;
+        min-height: 2.5rem;
+    }
+
+    .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate {
+        background-color: #121212;
+        --tw-bg-opacity: 1;
+        border-radius: .5rem;
+    }
+
+
+    .vanilla-calendar-day_selected-first .vanilla-calendar-day__btn_selected {
+        border-top-right-radius: 0.5rem;
+        border-bottom-right-radius: 0.5rem;
+    }
+
+    .vanilla-calendar-day_selected-last .vanilla-calendar-day__btn_selected {
+        border-top-left-radius: 0.5rem;
+        border-bottom-left-radius: 0.5rem;
+    }
+
+    .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate,
+    .vanilla-calendar-day__btn_selected.vanilla-calendar-day__btn_intermediate:hover {
+        background-color: #121212;
+    }
+
+    .vanilla-calendar-header__content {
+        flex-grow: 0;
+    }
+
+    .vanilla-calendar-header {
+        justify-content: center;
+    }
+
+    .vanilla-calendar-arrow {
+        background-color: transparent;
+        margin: 0 30px;
+    }
+
+    .vanilla-calendar-day {
+        width: 90%;
+
+        @media screen and (min-width: 768px) {
+            width: 50%;
+        }
+    }
 }

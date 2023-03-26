@@ -8,8 +8,12 @@
   <title>Bookara | Dashboard</title>
   <link rel='shortcut icon' href='assets/images/logo.png' type='image/x-icon'>
   <link rel="stylesheet" href="assets/vendor/fontawesome/css/all.min.css">
-  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/vendor/swiper/css/swiper-bundle.min.css">
+  <link rel="stylesheet" href="assets/vendor/vanila-calendar/vanilla-calendar.min.css">
+  <link rel="stylesheet" href="assets/vendor/vanila-calendar/themes/light.min.css">
+  <link rel="stylesheet" href="assets/vendor/vanila-calendar/themes/dark.min.css">
+  <script src="assets/vendor/vanila-calendar/vanilla-calendar.min.js" defer></script>
+  <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
@@ -192,7 +196,14 @@
                   </section>
                   <!-- ===//end of revenue-widget section === -->
                 </div>
+                <div class="col-12">
+                  <div class="calerder-quick-view">
+                    <h3 class="heading">Calender <span>quick view</span></h3>
+                    <div id="calendar"></div>
+                  </div>
+                </div>
               </div>
+
             </div>
             <div class="col-xl-4">
               <!-- === next-appointment-widget section start === -->
@@ -266,7 +277,6 @@
               </section>
               <!-- ===//end of next-appointment-widget section === -->
 
-
               <!-- === hours-widget section start === -->
               <section class="hours-widget p-lg-4 p-3">
                 <header class="hours-widget-header mb-5 d-flex  align-items-center justify-content-between">
@@ -299,25 +309,54 @@
   <script src="assets/js/custom.js"></script>
   <!-- Initialize Swiper -->
   <script>
-    const bookingsWidget = new Swiper(".bookings-widget-slider", {
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-    const revenueWidget = new Swiper(".revenue-widget-slider", {
-      autoplay: {
-        delay: 5000,
-        disableOnInteraction: false,
-      },
-      loop: true,
-      pagination: {
-        el: ".swiper-pagination",
-      },
+    document.addEventListener('DOMContentLoaded', () => {
+      const calendar = new VanillaCalendar('#calendar', {
+        settings: {
+          range: {
+            // disablePast: true,
+            disabled: ['2023-03-16', '2023-03-11', '2023-04-10', '2023-04-12'],
+          },
+          selected: {
+            dates: ['2023-03-15', '2023-03-20', '2023-04-04', '2023-04-20'],
+          },
+          selection: {
+            day: 'multiple-ranged',
+            // time: true,
+          },
+          visibility: {
+            // weekNumbers: true,
+            daysOutside: false,
+          },
+        },
+        actions: {
+          clickDay(event, dates) {
+            console.log(event, dates);
+          },
+        }
+      });
+      calendar.init();
+
+      const bookingsWidget = new Swiper(".bookings-widget-slider", {
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+      const revenueWidget = new Swiper(".revenue-widget-slider", {
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+
     });
   </script>
 </body>
